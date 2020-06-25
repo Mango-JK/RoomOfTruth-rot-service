@@ -1,8 +1,5 @@
 <br/>
 
-
-# 													[**🏠** 진실의 방](http://k02b2031.p.ssafy.io/main#) 
-
 <center><img src="./image/logo.PNG" width="300" height="150"><center>
 <br/>
 
@@ -44,7 +41,6 @@
 <br/>
 
 <center><img src="./image/Story.PNG" width="830" height="310"></center>
-
 <br/>
 
 <center><img src="./image/Architecture.PNG" width="830" height="430"><center>
@@ -60,10 +56,10 @@
 
 | Controller   | Feature                                                      |
 | ------------ | ------------------------------------------------------------ |
-| **address**  | **📘 주소검색 **                                              |
-| **agent**    | **📗 공인중개사 등록<br/>📗 공인중개사 조회<br/>📘 공인중개사 이력 조회<br/>📘 공인중개사 상세 조회<br/>📘 랭킹 가져오기 ** |
+| **address**  | **📘 주소검색**                                               |
+| **agent**    | **📗 공인중개사 등록<br/>📗 공인중개사 조회<br/>📘 공인중개사 이력 조회<br/>📘 공인중개사 상세 조회<br/>📘 랭킹 가져오기** |
 | **contract** | **📗 건물 이력 조회<br/>📗 이력 상세 조회<br/>📗 군집(지도) 이력 List 조회<br/>📗 이력 등록<br/>📘 시군구(지도) 모든 이력 조회<br/>📘 이력 작성 시 공인중개사 번호 조회** |
-| **favorite** | **📗 찜하기<br/>📙 찜하기 취소<br/>📘 찜한 이력 조회<br/>📘 찜한 점수 조회 ** |
+| **favorite** | **📗 찜하기<br/>📙 찜하기 취소<br/>📘 찜한 이력 조회<br/>📘 찜한 점수 조회** |
 | **file**     | **📗 파일 업로드**                                            |
 | **interest** | **📒 유저 관심정보 수정<br/>📘 ID로 유저 관심정보 조회**       |
 | **search**   | **📗 검색 기록 추가<br/>📙 검색 기록 삭제<br/>📙 ID로 검색 기록 조회** |
@@ -181,7 +177,6 @@ $ python manage.py runserver
 
 ## ✨ Contributors
 
-<center><img src="./image/team.PNG" width="900" height="260"></center>
-
+<center><img src="./image/Team.PNG" width="900" height="260"></center>
 
 
