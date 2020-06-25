@@ -1,0 +1,138 @@
+ssh 로그인 후
+1. sudo apt-get update
+2. sudo apt install docker.io => y
+3. done이 나왔다면
+docker --version으로 설치 확인
+4. sudo docker info 해도 정보 나옴
+5. 우분투 사용자에 대한 세부정보 확인
+cat /etc/passwd | grep ubuntu
+6. sudo 사용하지 않고 docker command실행하기 위해
+sudo usermod -aG docker ubuntu
+7. 사용자 추가됐는지 확인
+cat /etc/group | grep docker
+8. 로그아웃 , 로그인하기
+9.  docker -v 해서 결과가 나오면 sudo권한 없이 사용할 수있음
+--------------------->도커설치끝
+
+10.도커 서비스 실행
+
+service docker start
+
+ 
+
+----------------------> mysql 설치 시작
+
+1.mysql 도커이미지 조회
+
+docker search mysql
+
+ 
+
+2.mysql 도커이미지 다운로드
+
+docker pull mysql
+
+ 
+
+3.다운로드된 도커이미지 확인
+
+docker images
+
+ 
+
+4.도커 이미지를 통해 mysql 컨테이너 생성
+
+docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=<비밀번호> --name <mysql이름> mysql
+
+ 
+
+5. mysql 컨테이너가 동작하고 있는지 확인
+
+docker ps -a
+
+ 
+
+ 
+
+6.파워쉘에서 mysql 컨티에너 접속
+
+docker exec -i -t <mysql이름> bash
+
+ 
+
+7. mysql 접속
+
+apt-get install mysql
+
+mysql -u root -p
+
+password
+
+ 
+
+# Mysql 8.0 Install
+# 삭제
+
+$ sudo apt-get remove -y mysql-*
+$ sudo apt-get purge -y mysql-*
+
+sudo rm -rf /var/log/mysql
+
+sudo rm -rf /var/log/mysql.*
+
+sudo rm -rf /var/lib/mysql
+
+sudo rm -rf /etc/mysql
+
+
+======================================
+# 설치 ( V-8.0 )
+
+$ sudo wget https://dev.mysql.com/get/mysql-apt-config_0.8.15-1_all.deb
+
+$ sudo dpkg -i mysql-apt-config_0.8.15-1_all.deb
+
+# sudo apt-get update
+
+# sudo apt-get install mysql-server
+
+https://www.fosstechnix.com/install-mysql-8-on-ubuntu/
+
+
+============================================
+# Jar 배포
+
+1. 리눅스 환경에서 java (jar)를 데몬처럼 실행
+
+$ java ?jar abcdefg.jar &
+
+(사용자가 로그아웃시 프로그램 종료 됨)
+
+2. 사용자가 로그아웃해도 백그라운드로 실행되게 하는 명령어
+
+$ nohup java -jar abcdefg.jar &
+
+3. 프로세스 종료
+
+찾기 : ps ?ef | grep 'abcdefg'
+
+종료 : kill -9 (pid)
+
+-------------------------------
+sudo chmod +x ./gradlew
+
+./gradlew build
+
+cd build/lib
+
+java -jar ~~~~.jar
+
+nohup java -jar ~~~~.jar &
+
+nohup.out
+
+sudo tail -f nohup.out
+
+ps -ef | grep jar
+
+kill -9 ~~
