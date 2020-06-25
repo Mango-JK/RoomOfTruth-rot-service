@@ -1,220 +1,187 @@
-# 진실의 방(Room of Truth)
-
-![Room of Truth](./image/roomoftruth_logo.png)
-
-## Contents
-
-- #### About RoT
-
-- #### Team
-
-- #### Getting Started
-
-- #### Rule
-
-- #### Architecture
-
-- #### Project Schedule
-
-- #### Docs
-
-- #### License
-
-## About RoT
-
-![RoT 메인사진 or icon](./image/roomoftruth_mainpage.png)
-
-진실의 방(Room of Truth)은 하이퍼레저 패브릭으로 건물 거래 이력 조회하는 서비스입니다.
-
-- 등록된(허가된) 공인중개사는 이력 등록을 할 수 있습니다.
-
-- 사용자는 회원가입시에 등록한 성별, 나이, 선호도(교통, 마트/편의점, 교육시설, 의료시설, 음식점/카페, 문화시설)를 토대로 추천서비스를 제공받을 수 있습니다.
-
-- 거래 이력을 바탕으로 계약 금액 변경 추이를 그래프로 확인할 수 있습니다.
-
-## Team
-
-- ##### 박창현 : Project Manager
-
-  - 블록체인 네트워크 구축, 배포
-
-- ##### 김성민 : Back-End Developer
-
-  - 로그인, 유저, 공인중개사 등록, 도로명 주소 검색, 검색 기록, 파일 업로드, 찜하기, 선호도
-
-- ##### 김홍주 : DBA
-
-  - 데이터(거래 이력, 주변 시설 정보, 이미지) 전처리 및 수집, 추천 서비스, 차트 시각화
-
-- ##### 이정건 : Back-End Developer
-
-  - 거래, 상태 이력 등록 및 조회, 블록체인 네트워크 연동
-
-- ##### 장우영 : Front-End Developer
-
-  - Front-End 총괄, UI/UX, UCC 제작
-
-## Getting Started
-
-- ##### Front-End
-  
-  - Visual Studio Code(Vue CLI 3.0)
-    - command CLI(Ctrl + `) - npm install - npm run serve 
-  
-- ##### Back-End
-  
-  - IntelliJ (Java(1.8)) 
-    - Open
-  - Visual Studio Code (Python(3.6.10), Django(3.0.5))
-    - <a href="./%5B05%5D%20소스코드/bigdata/readme.md">readme 참조</a>
-
-## Rule
-
-- ##### Front-End 
-
-  - ##### Vue.js
-
-    - lowerCamelCase
-
-- ##### Back-End
-
-  - ##### Java
-
-    - lowerCamelCase : 지역 변수, private 변수, 메소드
-    - UpperCamelCase : 클래스 이름, public 변수, 메소드, 객체 
-
-  - ##### Python
-
-    - snake_case : 변수
-    - lowerCamelCase : 함수, 클래스
-
-- ##### Git (feature branch 단위)
-
-  ##### 기본적으로 첫 글자는 대문자를 사용하며, 마침표를 제외합니다.
-
-  - ##### FIX : 올바르지 않은 동작을 고친 경우에 사용합니다.
-
-    > Fix A  : A를 수정합니다.
-
-    ```
-    Fix login
-    ```
-
-  - ##### ADD : 코드나 테스트, 예제, 문서 등의 추가가 있을 때 사용합니다.
-
-    > Add A : A를 추가합니다.
-
-    ```
-    Add error pages
-    ```
-
-  - ##### REMOVE : 코드의 삭제가 있을 때 사용합니다.
-
-    > Remove A : A를 삭제합니다.
-
-    ```
-    Remove unnecessary login code
-    Remove sentences from README.md
-    ```
-
-  - ##### REFACTOR : 전면 수정이 있을 때 사용합니다.
-
-    > Refactor A : A를 전면 수정합니다.
-
-    ```
-    Refactor argument validation
-    Refactor login.XML
-    ```
-
-  - ##### UPDATE : 개정이나 버전 업데이트가 있을 때 사용합니다. 코드보다는 주로 문서나 리소스, 라이브러리등에 사용합니다.
-
-    > Update A to B : A를 B하기 위해 업데이트 합니다.
-
-    ```
-    Update repo docs to use HTTPS
-    ```
-
-  - ##### RENAME : 이름 변경이 있을 때 사용합니다.
-
-    > Rename A to B : A를 B로 이름 변경합니다.
-
-    ```
-    Rename login_info to loginInfo
-    ```
-
-## Architecture
-
-![ERD](./image/roomoftruth_architecture.png)
+<br/>
 
 
-## Project Schedule
+# 													[**🏠** 진실의 방](http://k02b2031.p.ssafy.io/main#) 
 
-```mermaid
-gantt
-    title 진실의 방(Room of Truth)
-    dateFormat  YYYY-MM-DD #바꾸지 않음 
-    section 기획
-    주제 선정:done, 2020-05-04, 11d  #완료되면 done을 기입
-    기획서작성:done, 2020-05-07, 8d
-    기술스택:done, 2020-05-15, 3d
-    역할/규칙:done, 2020-05-15, 3d
-    section 설계
-    개발환경:done, 2020-05-18, 2d
-    페이지 도식화	:done, 2020-05-18, 5d
-    상세기능 정의 : done, 2020-05-18, 5d 
-    DB 설계	:done, 2020-05-19, 4d
-    section Front-End
-    스켈레톤: done, 2020-05-23, 3d
-   	이러닝: 2020-05-23, 12d
-    회원가입: done, 2020-05-25, 2d
-    로그인/로그아웃: done, 2020-05-26, 2d
-    카테고리별 추천: done, 2020-05-26, 2d
-    메인페이지: done, 2020-05-26, 3d
-    이력페이지:done, 2020-06-01, 2d
-    상세페이지: done, 2020-06-01, 2d
-    찜하기: done, 2020-06-03, 2d
-    최근 본 방: done, 2020-06-03, 2d
-    분석/추천: done, 2020-06-05, 3d
-    section back-End
-    스켈레톤: done, 2020-05-23, 3d
-   	이러닝: 2020-05-23, 12d
-    회원가입: done, 2020-05-28, 4d
-    로그인/로그아웃: done, 2020-05-29, 4d
-   	건물이력: done, 2020-06-01, 3d
-    최근본 방: done, 2020-06-02, 3d
-    찜하기: done, 2020-06-03, 3d
-	카테고리별 추천: done, 2020-06-04, 4d
-	section Data-Processing
-   	이러닝: 2020-05-23, 12d
-    데이터 전처리: done, 2020-05-18, 8d
-    카테고리 데이터 수집: done, 2020-05-26, 5d
-    이미지 수집: done, 2020-05-27, 5d
-    추천 모듈: done, 2020-06-01, 5d
-    section Blockchain
-    네트워크 구축: 2020-05-22, 10d
-    체인코드: done, 2020-06-01, 3d 
-   	백엔드 연동 : done, 2020-06-03, 3d
-   	section 테스트 및 배포
-   	오류수정: 2020-06-07,2d
-   	발표준비: 2020-06-07,2d
-   	최종배포: 2020-06-07,2d
-   	UCC: 2020-06-04, 5d
-   	section 평가
-   	1차: crit, done,2020-05-15, 1d  #중요일정은 crit 기입
-    최종: crit, 2020-06-09, 1d  #중요일정은 crit 기입
-    section 산출물 작성
- 	산출물 작성: 2020-06-10,4d
-   
+<center><img src="./image/logo.PNG" width="300" height="150"><center>
+<br/>
+
+<br/>
+
+<center><img src="./image/Main.PNG" width="900" height="400"><center><br/>
+
+<center><img src="./image/Skills.PNG" width="900" height="400"><center>
+
+<br/>
+
+<br/>
+
+| <img src="./img/ranking.gif" align="center" height="300"> | <img src="./img/search.gif" align="center" height="300"> |
+| --------------------------------------------------------- | -------------------------------------------------------- |
+| <img src="./img/info.gif" align="center" height="300">    | <img src="./img/detail.gif" align="center" height="300"> |
+
+
+
+------
+
+<br/>
+
+<img src="https://user-images.githubusercontent.com/26213435/59832831-cebaf780-937f-11e9-84cd-e21f8cf1fd07.gif">
+
+<br/>
+
+- **KAKAO 로그인**: ***OAuth2.0***과 ***JWT***를 사용하여 간편하지만 안전한 로그인 기능을 제공합니다.
+- **Hyperledger Fabric**을 이용한 **부동산 분산원장 플랫폼**
+- **부동산 이력** (매매, 전세, 월세, 임대) 및 **유지보수이력** (시설, 환경, 유지) 관리
+- **검색어 자동완성** 및 **최근 검색어** 서비스 제공
+- **KAKAO MAP**을 활용한 위치 기반 서비스 제공
+- 공인중개사들의 **실시간 랭킹** 정보 제공
+- **실거래가 데이터** 활용 시세변경 추이 제공
+- 실제 데이터 기반 건물 주변정보 **시각화 제공**
+
+<br/>
+
+<br/>
+
+<center><img src="./image/Story.PNG" width="830" height="310"></center>
+
+<br/>
+
+<center><img src="./image/Architecture.PNG" width="830" height="430"><center>
+<br/>
+
+<br/>
+
+<br/>
+
+<center><img src="./image/Swagger.PNG" width="600" height="500"><center>
+<br/>
+<br/>
+
+| Controller   | Feature                                                      |
+| ------------ | ------------------------------------------------------------ |
+| **address**  | **📘 주소검색 **                                              |
+| **agent**    | **📗 공인중개사 등록<br/>📗 공인중개사 조회<br/>📘 공인중개사 이력 조회<br/>📘 공인중개사 상세 조회<br/>📘 랭킹 가져오기 ** |
+| **contract** | **📗 건물 이력 조회<br/>📗 이력 상세 조회<br/>📗 군집(지도) 이력 List 조회<br/>📗 이력 등록<br/>📘 시군구(지도) 모든 이력 조회<br/>📘 이력 작성 시 공인중개사 번호 조회** |
+| **favorite** | **📗 찜하기<br/>📙 찜하기 취소<br/>📘 찜한 이력 조회<br/>📘 찜한 점수 조회 ** |
+| **file**     | **📗 파일 업로드**                                            |
+| **interest** | **📒 유저 관심정보 수정<br/>📘 ID로 유저 관심정보 조회**       |
+| **search**   | **📗 검색 기록 추가<br/>📙 검색 기록 삭제<br/>📙 ID로 검색 기록 조회** |
+| **status**   | **📗 유지보수 이력 저장**                                     |
+| **user**     | **📗 새로운 유저 정보 저장<br/>📘 ID로 유저 정보 찾기<br/>📗 카카오 로그인<br/>📗 토큰 검증** |
+
+<br/>
+
+<br/>
+
+## **:chains:** 부동산 및 유지보수 이력 Chaincode
+
+```javascript
+var ContractRecord = {
+    contract_id: args[0],				// PK
+    around_around_id: args[1],			 // address Key
+    exclusive: args[2],					// 전용면적
+    floor: args[3],						// 층
+    ho: args[4],						// 호
+    kind: args[5], 						// 건물 유형
+    detail: args[6],					// 거래 내용
+    cost: args[7],						// 비용
+    monthly: args[8],					// 월세
+    license: args[9],					// 공인중개사
+    image: args[10],					// 이미지
+    contract_date: args[11],			 // 계약 일시
+    created_at: timestampString,		 // 원장 저장 일시
+    is_expired: args[12]				// 만료 날짜
+};
 ```
 
+<br/>
+
+```javascript
+var StatusRecord = {
+    status_id: args[0], 				// 유지보수 이력 num
+    around_around_id: args[1],			 // address Key
+    floor: args[2],						// 층
+    ho: args[3],						// 호
+    category: args[4]					// 유지보수 내용 [시설, 환경, 유지]
+    detail: args[5],					// 상세 내용    
+    cost: args[6],						// 비용
+    license: args[7],					// 공인중개사
+    image: args[8], 					// 이미지
+    start_date: args[9],				// 시작 날짜
+    end_date: args[10],					// 종료 날짜
+    created_at: timestampString,	 	// 등록 일시
+    is_expired: args[11]				// 만료 일시
+};
+
+```
+
+<br/>
+
+<br/>
+
+<br/>
+
+## 🏃 Quick Start
+
+### **Front-end (Vue)**
+
+:one:  **npm install** 명령어를 실행시켜 주세요.
+
+:two:  **npm run serve** 명령어를 실행시켜 주세요.
+
+:three: ​ **index.js** baseUrl을 http://localhost:8080/ 으로 설정해주세요.
+
+<br/>
+
+<br/>
+
+### **Back-end (Springboot)**
+
+:one:  https://projectlombok.org/download **lombok**을 다운로드 후, dependency를 추가해주세요.
+
+```java
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <scope>provided</scope>
+    </dependency>
+
+```
+
+ :two: **com.roomoftruth.rot** 경로에 있는 **RotApplication**을 실행시켜주세요.
+
+<br/>
+
+<br/>
+
+### Back-end (Django)
+
+##### :one: 프로젝트에 사용되는 라이브러리들을 설치
+
+```
+$ pip install -r requirements.txt
+```
+
+##### :two: ​데이터베이스 설정
+
+```
+$ python manage.py migrate
+```
+
+##### :three: 프로젝트 실행
+
+```
+$ python manage.py runserver
+```
+
+<br/>
+
+<br/>
+
+## ✨ Contributors
+
+<center><img src="./image/team.PNG" width="900" height="260"></center>
 
 
-## Docs
 
-[공부 및 개념 정리](./%5B08%5D%20docs)
-
-
-
-## License
-
-This is released under the MIT license. See [LICENSE](./LICENSE) for details.
