@@ -13,9 +13,9 @@
 
 <br/>
 
-| <img src="./img/ranking.gif" align="center" height="300"> | <img src="./img/search.gif" align="center" height="300"> |
-| --------------------------------------------------------- | -------------------------------------------------------- |
-| <img src="./img/info.gif" align="center" height="300">    | <img src="./img/detail.gif" align="center" height="300"> |
+| <img src="./image/login.gif" align="center" height="300"> | <img src="./image/recommend.gif" align="center" height="300"> |
+| --------------------------------------------------------- | ------------------------------------------------------------ |
+| <img src="./image/Map.gif" align="center" height="300">   | <img src="./image/Pin.gif" align="center" height="300">      |
 
 
 
@@ -178,5 +178,3 @@ $ python manage.py runserver
 ## ✨ Contributors
 
 <center><img src="./image/Team.PNG" width="900" height="260"></center>
-
-
